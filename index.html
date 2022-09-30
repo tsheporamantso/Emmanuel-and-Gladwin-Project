@@ -7,6 +7,251 @@
   </head>
 
   <body>
-     Hello World, we are programmers!
+    <nav id="navbar">
+      <header> PHP Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#What_you_should_already_know"
+            >What you should already know</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Php"
+            >Php</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+    
+        </li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+	 <li><a class="nav-link" href="#Declaring Variables">Declaring Variables</a></li>
+        <li>
+          <a class="nav-link" href="#Strings">Strings</a>
+        </li>
+        <li><a class="nav-link" href="#Constants">Constants</a></li>
+        <li><a class="nav-link" href="#Arithmetic Operators">Arithmetic Operators</a></li>
+    
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p> <ul>
+    	    <li>
+            PHP started out as a small open source project that evolved as more and more people found out how useful it was. Rasmus Lerdorf unleashed the first version of PHP way back in 1994. 
+          </p>
+	 </li>
+          <p>   
+  	   <li>
+           PHP is pleasingly zippy in its execution, especially when compiled as an Apache module on the Unix side. The MySQL server, once started, executes even very complex queries with huge result sets in record-setting time. 
+           </li>
+	</ul>
+	</p>
+          <ul>
+            <li>
+           PHP is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites. 
+            </li>
+            <li>
+           PHP supports a large number of major protocols such as POP3, IMAP, and LDAP. PHP4 added support for Java and distributed object architectures (COM and CORBA), making n-tier development a possibility for the first tim
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <article>
+          <p>This guide assumes you have the following basic background:</p>
+
+          <ul>
+            <li>
+              A general understanding of the Internet and the World Wide Web
+              (WWW).
+            </li>
+            <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+            <li>
+              Some programming experience. If you are new to programming, try
+              one of the tutorials linked on the main page about PHP.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="PHP">
+        <header>PHP</header>
+        <article>
+          <p>
+            PHP is forgiving: PHP language tries to be as forgiving as possible. 
+ 		PHP Syntax is C-Like
+          </p>
+
+          <p>
+            PHP performs system functions, i.e. from files on a system it can create, open, read, write, and close them
+          </p>
+          <p>
+            PHP can handle forms, i.e. gather data from files, save data to a file, thru email you can send data, return data to the user. 
+ 		You add, delete, modify elements within your database thru PHP. 
+		 Access cookies variables and set cookies. 
+ 		Using PHP, you can restrict users to access some pages of your website. 
+ 		It can encrypt data
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Hello_world">
+        <header>Hello world</header>
+        <article>
+          To get started with writing PHP, open the Scratchpad and write
+          your first "Hello world" PHP code:
+        <code> php echo "Hello, World!"; </code>
+
+          Select the code in the pad and hit Ctrl+R to watch it unfold in your
+          browser!
+        </article>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <p>
+        The main way to store information in the middle of a PHP program is by using a variable. Here are the most important things to know about variables in PHP. 
+  	All variables in PHP are denoted with a leading dollar sign ($). 
+ 	The value of a variable is the value of its most recent assignment. 
+ 	Variables are assigned with the = operator, with the variable on the left-hand side and the expression to be evaluated on the right. 
+ 	Variables can, but do not need, to be declared before assignment. 
+ 
+
+        </p>
+        <p>
+      	 Variables in PHP do not have intrinsic types - a variable does not know in advance whether it will be used to store a number or a string of characters. 
+ 	 Variables used before they are assigned have default values. 
+	 PHP does a good job of automatically converting types from one to another when necessary. 
+	 PHP variables are Perl-like. 
+ 
+        </p>
+        <p>
+          PHP has a total of eight data types which we use to construct our variables: 
+ 	Integers: are whole numbers, without a decimal point, like 4195. 
+	 Doubles: are floating-point numbers, like 3.14159 or 49.1. 
+	 Booleans: have only two possible values either true or false. 
+	 NULL: is a special type that only has one value: NULL. 
+	 Strings: are sequences of characters, like 'PHP supports string operations.' 
+	 Arrays: are named and indexed collections of other values. 
+	 Objects: are instances of programmer-defined classes, which can package up both other kinds of values and functions that are specific to the class. 
+ 	Resources: are special variables that hold references to resources external to PHP (such as database connections). 
+ 
+        </p>
+      </section>
+      <section class="main-section" id="Declaring_variables">
+        <header>Declaring variables</header>
+        <article>
+          You can declare a variable in different ways:
+          <p>
+            With the keyword $int_var. For example, <code>$int_var = 12345; $another_int = -12345 + 12345;</code> Integer can be in decimal (base 10), octal (base 8),
+		 and hexadecimal (base 16) format. Decimal format is the default, octal integers are specified with a leading 0, and hexadecimals have a leading 0x. 
+          </p>
+          <p>
+            By simply assigning it a value.Double For example,
+            <code>x = $many = 2.2888800; 
+		$many_2 = 2.2111200; 
+		$few = $many + $many_2; 
+		print(.$many + $many_2 = $few<br>.);</code> They like 3.14159 or 49.1. By default, doubles print with the minimum number of decimal places needed. For example, the code: 
+          </p>
+          <p>
+            With the keyword Boolean. For example,<code> if (TRUE) 
+   		print("This will always print<br>"); 
+		else 
+	   print("This will never print<br>"); </code> They have only two possible values either true or false. PHP provides a couple of constants especially for use as Booleans: TRUE and FALSE, which can be used like so: 
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Strings">
+        <header>Strings</header>
+        <article>
+          <p>
+           They are sequences of characters, like "PHP supports string operations". Following are valid examples of string: 
+          </p>
+		<code>$string_1 = "This is a string in double quotes"; 
+			$string_2 = "This is a somewhat longer, singly quoted string"; 
+			$string_39 = "This string has thirty-nine characters"; 
+			$string_0 = ""; // a string with zero characters</code>
+      
+        </article>
+      </section>
+       
+      <section class="main-section" id="CONSTANTS">
+        <header>Constant</header>
+        <article>
+        A constant is a name or an identifier for a simple value. A constant value cannot change during the execution of the script. By default, a constant is case-sensitive. By convention, constant identifiers are always uppercase. A constant name starts with a letter or underscore, followed by any number of letters, numbers, or underscores. 
+	If you have defined a constant, it can never be changed or undefined. 
+
+	To define a constant you have to use define() function and to retrieve the value of a constant, you have to simply specifying its name. Unlike with variables, you do not need to have a constant with a $. You can also use the function constant() to read a constant's value if you wish to obtain the constant's name dynamically. 
+	constant() function As indicated by the name, this function will return the value of the constant. 
+ 
+	This is useful when you want to retrieve value of a constant, but you do not know its name, i.e., it is stored in a variable or returned by a function.
+
+          <code> define("MINSIZE", 50); 
+ 		echo MINSIZE; 
+	echo constant("MINSIZE"); // same thing as the previous line </code> Only scalar data (boolean, integer, float and string) can be contained in constants
+
+          <p>
+          <b>  Differences between constants and variables are: </b> <br>
+	There is no need to write a dollar sign ($) before a constant, where as in Variable one has to write a dollar sign. 
+ 		Constants cannot be defined by simple assignment, they may only be defined using the define() function. 
+ 		Constants may be defined and accessed anywhere without regard to variable scoping rules. 
+ 
+          </p>
+
+          <code>// Valid constant names 
+		define("ONE",     "first thing"); 
+		define("TWO2",    "second thing"); 
+		define("THREE_3", "third thing") 
+		// Invalid constant names 
+		define("2TWO",    "second thing"); 
+		define("__THREE__", "third value") </code>
+        
+          
+      <section class="main-section" id="Arithmetic Operators">
+        <header>Arithmetic Operators</header>
+        <article>
+          The following arithmetic operators are supported by PHP language: 
+ 
+		Assume variable A holds 10 and variable B holds 20 then: 
+          <p>
+            For example, Try the following example to understand all the arithmetic operators. Copy and paste following PHP program in test.php file and keep it in your PHP Server's document root and browse it using any browse
+          </p>
+
+          <code>$a = 42; 
+   	 $b = 20; 
+     
+   	 $c = $a + $b; 
+   	 echo "Addition Operation Result: $c <br/>"; 
+   	 $c = $a - $b; 
+   	 echo "Subtraction Operation Result: $c <br/>"; 	
+	 $c = $a * $b; 
+    	echo "Multiplication Operation Result: $c <br/>"; 
+    	$c = $a / $b; 
+   	 echo "Division Operation Result: $c <br/>"; 
+   	 $c = $a % $b; 
+   	 echo "Modulus Operation Result: $c <br/>"; 
+    	$c = $a++;  
+    	echo "Increment Operation Result: $c <br/>"; 
+    	$c = $a--;  
+   	 echo "Decrement Operation Result: $c <br/>"; </code>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a
+                href="https://php_tutorial.org/en-US/docs/Web/php/Guide"
+                target="_blank">TUTORIALPOINT</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
